@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.StarContinerSet{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background:#D51316;
+	width: 100%;
+}
+
+.totalPopularSet{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background:#1861D5;
+	width: 100%;
+}

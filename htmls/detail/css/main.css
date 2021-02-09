@@ -1,0 +1,133 @@
+/*
+--------------------------------------------------------
+文件名称：main.css
+文件作用：主界面布局
+作者： Alex Greenall
+最后修改时间：2021.2.1
+最近更新：解决了 flex 布局子元素超出限定范围的问题
+版权所有：Alex Greenall
+--------------------------------------------------------
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+	width: 100vw;
+	min-height: 100vh;
+    font-family: Arial;
+    margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #DCD6E9;
+	flex-direction: column;
+}
+	
+
+.row {  
+	width: 80vw;
+	max-width: 64rem;
+    display: flex;
+    flex-wrap: wrap;
+	flex-direction: row;
+	border-radius: 15px;
+	background: #FFFFFF;
+}
+
+.side {
+    flex: 40%;
+    padding: 20px;
+}
+
+.main {   
+    flex: 60%;
+    padding: 20px;
+	border-right-width: 1px;
+	border-right-style: dashed;
+	border-right-color:  #A3A3A3;
+}
+
+.lock{
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.imageViewSet{
+	width:100%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.model{
+	position: absolute;
+	top:15px;
+	width: 500px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 15px;
+	background:rgba(255,255,255,1.00);
+	border-radius: 50px;
+	text-align: center;
+	border: #DCD6E9 solid 1px;
+	z-index: 100;
+}
+
+.disappear{
+	transform: translateY(-500px);
+}
+
+#psgContent{
+/*	flex-wrap: wrap;*/
+	white-space: normal;
+}
+
+@media screen and (max-width: 1024px) {
+	h1{
+		font-size: 1.75rem;
+	}
+	h3{
+		font-size: 1rem;
+	}
+	h4{
+		font-size: 0.75rem;
+	}
+	p{
+		font-size: 0.75rem;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	body{
+		height: auto;
+	}
+	.row {   
+        flex-direction: column;
+		width: 100%;
+		border-radius: 0px;
+    }
+	.main{
+		border-right: none;
+		border-bottom-width: 1px;
+		border-bottom-style: dashed;
+		border-bottom-color:  #A3A3A3;
+	}
+	.swiper-button-next, .swiper-button-prev{
+		transform: translateY(1000px);
+		opacity: 0;
+	}
+}
+
+@media screen and (max-width:340px){
+	h1{
+		font-size:  1.6rem;
+	}
+}

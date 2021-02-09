@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<!--
+--------------------------------------------------------
+文件名称：index.html
+文件作用：主界面
+作者：Alex Greenall
+最后修改时间：2021.2.5
+最近更新： 1.页面的模板式复用 2.页面锁，爬虫爬出来的本页面可能打不开
+版权所有：Alex Greenall
+--------------------------------------------------------
+-->
+
+<html>
+<head>
+<title>页面标题</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="all">
+	<meta name="author" content="Alex Greeanll">
+	<link rel="shortcut icon"  href="/favicon.ico" type="image/x-icon"/>
+	<meta name="description" content="Hello,这里是 Alex 的个人主页，欢迎您访问！">
+	<link rel="stylesheet" href="css/font-awesome.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/menuBar.css" />
+		<link rel="stylesheet" href="css/DLButton.css" />
+		<link rel="stylesheet" href="css/imageView.css" />
+		<link rel="stylesheet" href="css/starCollectionView.css" />
+		<link rel="stylesheet" href="css/totalPopularView.css" />
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="css/emoji.css" />
+	<script src="js/jquery.min.js"></script>
+	<script src="js/code.js"></script>
+	<script src="contentAll.json"></script>
+	<script>
+		var url = location.search;
+        var params = url.substr(1);
+        var pa = params.split("&");
+        var s = new Object();
+        for(var i = 0; i < pa.length; i ++){
+            s[pa[i].split("=")[0]] = unescape(pa[i].split("=")[1]);
+        }
+		var base = new Base64();
+		var json = JSON.parse(data);
+			//https://wws.lanzous.com/b01zx2vsb 密码:gvnv
+	</script>
+</head>
+<body>
+	<div style="display:none"><img src="images/Finder.png" /></div>
+	<div class="model disappear" id="model">密码:gvnv,
+		<text id="success">
+			<button class="btn_1" data-clipboard-text="gvnv" id="btn_1">
+				点此
+			</button>
+			复制到剪切板并访问
+		</text>
+	</div>
+	
+<div class="barView">
+	<ul id="menu">
+		<li><a href="../../index.html" class="drop"><i class="fa fa-chevron-left" aria-hidden="true"></i> 回到 Alex's Page</a>
+			<div class="dropdown_2columns">
+				<div class="col_2">
+					<h2>欢迎！</h2>
+				</div>
+				<div class="col_2">
+					<p>点击这里看看<a href="../openSource/index.html">本网站所用的开源库</a></p>
+				</div>
+			</div>
+		</li>
+		<li class="menu_right" id="exceptLi"><a href="../openSource/index.html">本网站所用到的开源库</a></li>
+	</ul>
+</div>
+	
+<div class="row">
+  <div class="main">
+      <h1 id="psgTitle">标题加载中...</h1>
+    <p id="psgContent">正文内容加载中...如果长时间没有反应，说明您可能不是从主页访问的此页面，则页面锁无法打开。</p>
+    <h4 id="psgSituation">状态：加载中...</h4>
+    <button class="button">
+		<span class="default">下载</span>
+		<span class="success">已发送下载请求</span>
+		<div class="left"></div>
+		<div class="right"></div>
+	</button>
+	  
+	 <h3>项目截图</h3>
+	  <div class="imageViewSet">
+      
+		  <div class="swiper-container">
+			<div class="swiper-wrapper">
+			  <div class="swiper-slide"><img src="images/sample.png" id="pic1" alt="picture load failed" class="imgSwiper" /></div>
+			  <div class="swiper-slide"><img src="images/sample.png" id="pic2" alt="picture load failed" class="imgSwiper" /></div>
+			  <div class="swiper-slide"><img src="images/sample.png" id="pic3" alt="picture load failed" class="imgSwiper" /></div>
+			  <div class="swiper-slide"><img src="images/sample.png" id="pic4" alt="picture load failed" class="imgSwiper" /></div>
+			</div>
+
+			<div class="swiper-pagination"></div>
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		  </div>
+	 </div> 
+  </div>
+  <div class="side">
+	  
+	  <div class="lock">
+		<div class="reviews-container" align="center">
+			<h2>获得 Star 数量预览</h2>
+			<div class="review"> <span class="icon-container">5 <i class="fa fa-star"></i></span>
+			<div class="progress" align="left">
+				<div class="progress-done" data-done="68" id="prog5"></div>
+			</div>
+			<span class="percent">68%</span>
+		</div>
+
+		<div class="review"> <span class="icon-container">4 <i class="fa fa-star"></i></span>
+			<div class="progress" align="left">
+				<div class="progress-done" data-done="13" id="prog4"></div>
+			</div>
+			<span class="percent">13%</span> 
+		</div>
+
+		<div class="review"> <span class="icon-container">3 <i class="fa fa-star"></i></span>
+			<div class="progress" align="left">
+				<div class="progress-done" data-done="9" id="prog3"></div>
+			</div>
+			<span class="percent">9%</span> 
+		</div>
+
+		<div class="review"> <span class="icon-container">2 <i class="fa fa-star"></i></span>
+			<div class="progress" align="left">
+				<div class="progress-done" data-done="3" id="prog2"></div>
+			</div>
+			<span class="percent">3%</span> 
+		</div>
+
+		<div class="review"> <span class="icon-container">1 <i class="fa fa-star"></i></span>
+			<div class="progress" align="left">
+				<div class="progress-done" data-done="7" id="prog1"></div>
+			</div>
+			<span class="percent">7%</span> </div>
+		</div>
+	  </div>
+	  
+	  <div class="popcontainer">
+				<div class="box box1">
+				<div class="name">
+					<h4>咖啡杯</h4>
+					<h5>2021.1.22</h5>
+				</div>
+				<p>66.6%</p>
+			 </div>
+			 <div class="box box2">
+				<div class="name">
+					<h4>jrxy</h4>
+					<h5>2020.12.17</h5>
+				</div>
+				<p>62.3%</p>
+			  </div>
+			  <div class="box box3">
+				<div class="name">
+					<h4>球友加</h4>
+					<h5>2020.2.16</h5>
+				</div>
+				<p>60.6%</p>
+			  </div>
+			  <div class="box box4">
+				<div class="name">
+				  <h4>iPhone XR</h4>
+				  <h5>2019.10</h5>
+				</div>
+				<p>60.0%</p>
+			  </div>
+			</div>
+	  
+  </div>
+</div>
+	<script src="js/DLButtonScript.js"></script>
+	<script src="js/gsap.min.js"></script>
+	<script src="js/StarScript.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+		  pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			renderBullet: function (index, className) {
+			  return '<span class="' + className + '">' + (index + 1) + '</span>';
+			},
+		  },
+		 navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		  },
+		});
+  </script>
+	<script>
+		var clipboard = new ClipboardJS('.btn_1');
+
+		clipboard.on('success', function(e) {
+			console.info('Action:', e.action);
+			console.info('Text:', e.text);
+			console.info('Trigger:', e.trigger);
+
+			e.clearSelection();
+			document.getElementById("success").innerHTML = "复制成功";
+			setTimeout(function(){
+//				window.open("https://wws.lanzous.com/b01zx2vsb");
+				window.location.href="https://wws.lanzous.com/b01zx2vsb";
+			},1000);
+		});
+	</script>
+	<script>
+		//我本来想：通过s.name直接绑定 json，结果不会 string 转 object......
+		//害，就这样吧，还好维护。。。
+//		if(base.decode(s.site + '=') == "Alex Greenall protected"){
+//				 if(s.name == "coffeeCup"){fillTheContent(json.coffeeCup);}
+//			else if(s.name == "alexName"){fillTheContent(json.alexName);}
+//			else if(s.name == "spy"){fillTheContent(json.spy);}
+//			else if(s.name == "djtuMap"){fillTheContent(json.djtuMap);}
+//			else if(s.name == "footballFriendsPlus"){fillTheContent(json.footballFriendsPlus);}
+//			else if(s.name == "myButton"){fillTheContent(json.myButton);}
+//			else if(s.name == "tubiaoWall"){fillTheContent(json.tubiaoWall);}
+//			else if(s.name == "earth"){fillTheContent(json.earth);}
+//			else if(s.name == "pingPong"){fillTheContent(json.pingPong);}
+//			else if(s.name == "iPhoneXR"){fillTheContent(json.iPhoneXR);}
+//			else if(s.name == "summer"){fillTheContent(json.summer);}
+//			else if(s.name == "cola"){fillTheContent(json.cola);}
+//			else if(s.name == "jrxy"){fillTheContent(json.jrxy);}
+//			else if(s.name == "alexPage"){fillTheContent(json.alexPage);}
+//		}
+		
+		eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('0(m.l(1.k+\'=\')=="p o n"){0(1.3=="a"){2(4.a)}5 0(1.3=="b"){2(4.b)}5 0(1.3=="c"){2(4.c)}5 0(1.3=="9"){2(4.9)}5 0(1.3=="6"){2(4.6)}5 0(1.3=="7"){2(4.7)}5 0(1.3=="8"){2(4.8)}5 0(1.3=="h"){2(4.h)}5 0(1.3=="i"){2(4.i)}5 0(1.3=="j"){2(4.j)}5 0(1.3=="g"){2(4.g)}5 0(1.3=="d"){2(4.d)}5 0(1.3=="e"){2(4.e)}5 0(1.3=="f"){2(4.f)}}',26,26,'if|s|fillTheContent|name|json|else|footballFriendsPlus|myButton|tubiaoWall|djtuMap|coffeeCup|alexName|spy|cola|jrxy|alexPage|summer|earth|pingPong|iPhoneXR|site|decode|base|protected|Greenall|Alex'.split('|'),0,{}))
+
+		
+		function fillTheContent(jsonContent){
+			//正文
+			document.getElementById("psgTitle").innerHTML = jsonContent.psgTitle;
+			document.getElementById("psgContent").innerHTML = jsonContent.psgContent;
+			document.getElementById("psgSituation").innerHTML = jsonContent.psgSituation;
+			
+			//图片
+			document.getElementById("pic1").src = jsonContent.psgPicture.pic1;
+			document.getElementById("pic2").src = jsonContent.psgPicture.pic2;
+			document.getElementById("pic3").src = jsonContent.psgPicture.pic3;
+			document.getElementById("pic4").src = jsonContent.psgPicture.pic4;
+			
+			//标题
+			document.title = s.name + ' - Alex的个人主页';
+			
+			//Star初始化
+			document.getElementById("prog5").style.width = 20;
+			document.getElementById("prog4").style.width = 20;
+			document.getElementById("prog3").style.width = 20;
+			document.getElementById("prog2").style.width = 20;
+			document.getElementById("prog1").style.width = 20;
+		}
+	</script>
+</body>
+</html>
