@@ -1,0 +1,39 @@
+/*
+--------------------------------------------------------
+文件名称：screendisplay.css
+文件作用：页面限制
+作者：Alex Greenall
+最后修改时间：2021.1.26
+最近更新：页面已支持响应式，于是废除这个
+版权所有：Alex Greenall
+--------------------------------------------------------
+*/
+
+/*
+@charset "UTF-8";
+.dispMin{
+	height: 100vh;
+	z-index: 100000;
+	display: none;
+}
+
+@media screen and (max-width:1300px){
+	div:not(.dispMin){display:none; }
+	.dispMin{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	.hintTitle{
+		font-weight: bold;
+		font-size: 50px;
+	}
+	.hintContent{
+		font-weight: bold;
+		font-size: 19px;
+	}
+}
+
+
+*/
