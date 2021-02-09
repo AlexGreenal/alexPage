@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  <title>Easter Egg</title>
+  
+<style>
+body {
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #333;
+  font-family: Helvetica;
+  margin: 0;
+  padding: 0;
+  font-size: 14rem;
+  letter-spacing: -0.3rem;
+  position: relative;
+}
+
+h1::after {
+  content: attr(data-spotlight);
+  color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-clip-path: ellipse(100px 100px at 0% 50%);
+  clip-path: ellipse(100px 100px at 0% 50%);
+  animation: spotlight 5s infinite;
+  background-image: url("background.webp");
+  background-size: 150%;
+  background-position: center center;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.aStyle, .aStyle:link, .aStyle:hover, .aStyle:active, .aStyle:visited{
+	text-decoration: none;
+}
+
+@-webkit-keyframes out {
+    0% {
+      opacity: 0; 
+    }
+    50% {
+      opacity: 0.5; 
+    }
+    100% {
+      opacity: 1; 
+    }
+  }
+ 
+  .removeBlank {
+    -webkit-animation: out 1s forwards linear;
+  }
+
+
+
+@keyframes spotlight {
+  0% {
+    -webkit-clip-path: ellipse(100px 100px at 0% 50%);
+    clip-path: ellipse(100px 100px at 0% 50%);
+  }
+  
+  50% {
+    -webkit-clip-path: ellipse(100px 100px at 100% 50%);
+    clip-path: ellipse(100px 100px at 100% 50%);
+  }
+  
+  100% {
+    -webkit-clip-path: ellipse(100px 100px at 0% 50%);
+    clip-path: ellipse(100px 100px at 0% 50%);
+  }
+}
+
+	@media screen and (max-width:1400px){
+		h1{
+			font-size:  10rem;
+		}
+	}
+	@media screen and (max-width:980px){
+		h1{
+			font-size:  7rem;
+		}
+	}
+	@media screen and (max-width:670px){
+		h1{
+			font-size:  5rem;
+		}
+	}
+	@media screen and (max-width:470px){
+		h1{
+			font-size:  3rem;
+		}
+	}
+</style>
+	<script>
+		function hint(){ 
+			window.open("paint/index.html","_self");
+		} 
+		setTimeout(hint,5000);
+	</script>
+</head>
+
+<body>
+	<a class="aStyle" href="paint/index.html">
+	  <h1 data-spotlight="Alex Greenall">Alex Greenall</h1>
+	</a>
+</body>
+
+</html>

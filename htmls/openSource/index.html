@@ -1,0 +1,279 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>本网站使用的开源库</title>
+<style>
+ * {
+	margin:0;
+	padding:0;
+}
+body {
+	width:100%;
+	height:100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+body,.window::before {
+	background:url("alexname.png") 0 / cover fixed;
+}
+.window {
+	width:70%;
+	height: 70%;
+	position:relative;
+	margin:2rem auto;
+	padding:0;
+	background:hsla(0,0%,100%,.25) border-box;
+	overflow:hidden;
+	border-radius:15px;
+	box-shadow:0 0 0 1px hsla(0,0%,100%,.3) inset,0 .5em 1em rgba(0,0,0,0.1);
+	text-shadow:0 1px 1px hsla(0,0%,100%,.3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family:PingFang SC,SimHei,Microsoft Yahei,serif;
+}
+.window::before {
+	content:'';
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+/*	margin:-30px;*/
+	z-index:-1;
+	-webkit-filter:blur(10px);
+	filter:blur(10px);
+}
+.title{
+	position: relative;
+/*	background-color: rgb(238,227,227);*/
+	width: 100%;
+	height: 10%;
+	display: flex;
+	justify-content: center;
+	border-radius: 15px 15px 0 0;
+	flex-direction: row;
+}
+	
+.title::before{
+	content:'';
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	border-bottom: solid #CBCBCB 1px;
+	opacity: 0.2;
+}
+
+.quit_min_max_button{
+	width: 60px;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin-left: 0.75rem;
+}
+
+.qmmbStyle{
+	width:0.75rem;
+	height:0.75rem;
+	border-radius: 50%;
+}
+
+.close{
+	background: #DF5053;
+}
+
+.minisize{
+	background:#E6C70F;
+}
+
+.maxsize{
+	background: #4BC732;
+}
+
+.rowTitle{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: -3.75rem;
+}
+
+.content{
+/*	background-color: white;*/
+	width: 100%;
+	height:90%;
+	border-radius: 0 0 15px 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+.sideBar{
+	position: relative;
+	width: 20%;
+	height: 100%;
+}
+
+.sideBar::before{
+	content:'';
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	border-right: solid #CBCBCB 1px;
+	opacity: 0.2;
+}
+.mainContent{
+	width: 80%;
+	height: 100%;
+	background: rgba(255,255,255,0.6);
+}
+	li{
+		list-style: none;
+		list-style-type: none;
+		width: calc(100%-1.5em);
+		height: 2em;
+		padding-left: 1.5em;
+		position:relative;
+		margin-left: 2%;
+		vertical-align: middle;
+		line-height: 2em;
+	}
+	li:hover{
+		width: 80%;
+		background-color: rgba(178,226,177,0.3);
+		border-radius: 8px;
+		cursor: pointer;
+	}
+	
+	.liAppearence{
+		width: 80%;
+		background-color: rgba(178,226,177,1.0);
+		border-radius: 8px;
+		cursor: pointer;
+	}
+	
+	iframe{
+		width: 100%;
+		height: 100%;
+		display: none;
+	}
+	.desciption{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	
+	.desciption h1 font{
+		font-size: 4em;
+	}
+	
+	.desciption > p{
+		font-size: 1em;
+	}
+	
+	.displayMin{
+		display: none;
+	}
+	
+	@media screen and (max-width:1023px){
+		.window{
+			display: none;
+		}
+		.displayMin{
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			border-radius: 15px;
+			background-color: rgba(255,255,255,0.6);
+		}
+	}
+	
+</style>
+</head>
+<body>
+<div class="window">
+	<div class="title">
+		<div class="quit_min_max_button">
+			<div class="close qmmbStyle"></div>
+			<div class="minisize qmmbStyle"></div>
+			<div class="maxsize qmmbStyle"></div>
+		</div>
+		<div class="rowTitle">
+			<i class="fa fa-file-text-o" aria-hidden="true" style="color:#5C5C5C;"></i>&nbsp;
+			<font style="font-weight: bold">本网站使用的开源库</font>&nbsp;
+			<i class="fa fa-angle-down" aria-hidden="true" style="color:#5C5C5C;"></i>
+		</div>
+	</div>
+	<div class="content">
+		<div class="sideBar">
+			<br>
+			<ul>
+				<li id="0" onClick="clickLi(0)">font awesome</li>
+				<li id="1" onClick="clickLi(1)">Swiper.js</li>
+				<li id="2" onClick="clickLi(2)">normalize</li>
+				<li id="3" onClick="clickLi(3)">animOnscroll</li>
+				<li id="4" onClick="clickLi(4)">Vue.js</li>
+				<li id="5" onClick="clickLi(5)">jQuery.js</li>
+				<li id="6" onClick="clickLi(6)">mouse right</li>
+				<li id="7" onClick="clickLi(7)">Masonry</li>
+				<li id="8" onClick="clickLi(8)">classie</li>
+			</ul>
+		</div>
+		<div class="mainContent">
+			<iframe id="iframe">您的浏览器可能不支持网页嵌套</iframe>
+			<div class="desciption">
+				<h1><font>Alex's</font>&nbsp;Page</h1>
+				<p>下一代个人主页的界面构想样例</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="displayMin">
+	<h1>请使用电脑打开此页面</h1>
+	<p align="center">主要是因为在手机上页面被拉伸过度不太好看<br>
+		以及作者懒得去适配了。。。</p>
+</div>
+<script>
+	var site = [
+		"http://www.fontawesome.com.cn",
+		"https://www.swiper.com.cn",
+		"https://github.com/necolas/normalize.css",
+		"https://github.com/derekck/animonscroll",
+		"https://cn.vuejs.org/v2/guide/",
+		"http://www.jquerycn.cn",
+		"https://github.com/qimengke/mouseRight",
+		"http://masonry.desandro.com",
+		"https://github.com/ded/bonzo"
+	]
+	
+	function clickLi(num){
+		for (var i=0;i<site.length;i++){
+			if(document.getElementById(String(i)).classList.contains("liAppearence")){
+				document.getElementById(String(i)).classList.remove("liAppearence")
+			}
+		}
+		document.getElementById(String(num)).classList.add("liAppearence");
+		document.getElementsByClassName("desciption").style="display:none";
+		document.getElementById("iframe").style="display:block";
+		document.getElementById("iframe").src = site[num];
+	}
+	
+</script>
+</body>
+</html>
