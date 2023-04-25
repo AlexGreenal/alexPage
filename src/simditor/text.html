@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Untitled Document</title>
+<link rel="stylesheet" href="assets/styles/simditor.css" />
+<style>
+	body{
+		width: 100%;
+		height: 100vh;
+		padding: 0;
+		margin: 0;
+	}
+	textarea{
+		width: 100%;
+		height: 100%;
+		background: rgba(255,255,255,0.4);
+	}
+</style>
+</head>
+
+<body>
+<!--<textarea id="txt-content" data-autosave="editor-content" autofocus required>-->
+<textarea id="editor" autofocus >
+<h2>窗口帮助</h2>
+<p>本页面使用了模糊来表示窗口间的焦点关系，如下图。如果出现错误的窗口叠加关系，则可以通过点击一下窗口的标题栏解决。</p>
+<img src="img/1.png" />
+<p>窗口的控制按钮依次为关闭（红色）还原（黄色）最大化（绿色），如下图。</p>
+<img src="img/1.png" />
+<p>也有一些窗口多了一个蓝色的按钮，它的作用是跳转，即在新标签页打开页面，一般用于功能性页面展示，如下图。</p>
+<img src="img/3.png" />
+</textarea>
+
+<script type="text/javascript" src="assets/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="assets/scripts/module.js"></script>
+<script type="text/javascript" src="assets/scripts/uploader.js"></script>
+<script type="text/javascript" src="assets/scripts/hotkeys.js"></script>
+<script type="text/javascript" src="assets/scripts/dompurify.js"></script>
+<script type="text/javascript" src="assets/scripts/simditor.js"></script>
+<script type="text/javascript" src="assets/scripts/page-demo.js"></script>
+<script>
+	var editor = new Simditor({
+  textarea: $('#editor')
+  //optional options
+});
+</script>
+</body>
+</html>

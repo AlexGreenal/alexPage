@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Alex个人主页的“启动台”</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="swiper-bundle.min.css" />
+	<style>
+		html{
+			font-family:  Helvetica, Arial, "sans-serif";
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		body{
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+		.padContent{
+			width: 80%;
+			height: 90%;
+			margin: auto;
+			display: grid;
+			grid-template-columns:repeat(7,minmax(50px,300px));
+			grid-template-rows: repeat(6,minmax(50px,200px));
+		}
+		.appContent{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			flex-direction: column;
+		}
+		.appContent img{
+			height: 70%;
+		}
+		.swiper{
+			width: 100%;
+			height: 95%;
+		}
+		.swiper-slide,.swiper-slide {
+        width: 100%;
+        height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+      	}
+		.searchBar{
+			width: 100%;
+			height: 5%;
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+		}
+		#search{
+			width: 12%;
+			height: 1.5rem;
+			border-radius: 5px;
+			background: rgba(255,255,255,.4);
+			border: 1px rgba(190,190,190,.4) solid;
+			font-size: 1rem;
+			text-align: center;
+		}
+		span{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: row;
+		}
+		.match {
+		  background: yellow;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="searchBar">
+		<input id="search" name="keyword" placeholder="&nbsp;搜索"/>
+	</div>
+	<div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+		   <div class="swiper-slide">
+				<div class="padContent">
+					<div class="appContent"><img src="appIcon/photopea.png" alt="" /><span>Photoshop</span></div>
+					<div class="appContent"><img src="appIcon/bilibili.png" alt="" /><span>BiliBili</span></div>
+					<div class="appContent"><img src="appIcon/baiduyun.png" alt="" /><span>百度云</span></div>
+					<div class="appContent"><img src="appIcon/gaodemap.png" alt="" /><span>高德地图</span></div>
+					<div class="appContent"><img src="appIcon/jinshandoc.png" alt="" /><span>金山文档</span></div>
+					<div class="appContent"><img src="appIcon/autocadonline.png" alt="" /><span>AutoCAD</span></div>
+					<div class="appContent"><img src="appIcon/caoliaoqrcode.png" alt="" /><span>草料二维码</span></div>
+					<div class="appContent"><img src="appIcon/matlabonline.png" alt="" /><span>MATLAB</span></div>
+					<div class="appContent"><img src="appIcon/latexlive.png" alt="" /><span>LATEX编辑器</span></div>
+					<div class="appContent"><img src="appIcon/neteasemusic.png" alt="" /><span>网易云音乐</span></div>
+					<div class="appContent"><img src="appIcon/smartkoutu.png" alt="" /><span>智能抠图</span></div>
+					<div class="appContent"><img src="appIcon/picconventer.png" alt="" /><span>图片格式转换</span></div>
+					<div class="appContent"><img src="appIcon/texttosound.png" alt="" /><span>文字转语音</span></div>
+					<div class="appContent"><img src="appIcon/wechat.png" alt="" /><span>微信</span></div>
+					<div class="appContent"><img src="appIcon/xunjiePDF.png" alt="" /><span>迅捷PDF转换</span></div>
+					<div class="appContent"><img src="appIcon/visualstudiocode.png" alt="" /><span>VSCode</span></div>
+					<div class="appContent"><img src="appIcon/bing.png" alt="" /><span>必应浏览器</span></div>
+					<div class="appContent"><img src="appIcon/clips.png" alt="" /><span>clipchamp</span></div>
+					<div class="appContent"><img src="appIcon/douyin.png" alt="" /><span>抖音</span></div>
+					<div class="appContent"><img src="appIcon/spline.png" alt="" /><span>spline</span></div>
+					<div class="appContent"><img src="appIcon/yitu.png" alt="" /><span>思维导图</span></div>
+					<div class="appContent"><img src="appIcon/mastergo.png" alt="" /><span>MasterGo</span></div>
+					<div class="appContent"><img src="appIcon/zhihu.png" alt="" /><span>知乎</span></div>
+					<div class="appContent"><img src="appIcon/weibo.png" alt="" /><span>微博</span></div>
+					<div class="appContent"><img src="appIcon/photo.png" alt="" /><span>证件照换底色（付费）</span></div>
+					<div class="appContent"><img src="appIcon/caculator.png" alt="" /><span>计算器</span></div>
+					<div class="appContent"><img src="appIcon/youdao.png" alt="" /><span>有道词典</span></div>
+					<div class="appContent"><img src="appIcon/baidunetdisk.png" alt="" /><span>百度网盘</span></div>
+					<div class="appContent"><img src="appIcon/tencentmeeting.png" alt="" /><span>腾讯会议</span></div>
+					<div class="appContent"><img src="appIcon/chaoxing.png" alt="" /><span>超星学习通</span></div>
+					<div class="appContent"><img src="appIcon/minecraft.png" alt="" /><span>Minecraft</span></div>
+					<div class="appContent"><img src="appIcon/jianying.png" alt="" /><span>剪映（需Chrome）</span></div>
+					<div class="appContent"><img src="appIcon/taobao.png" alt="" /><span>淘宝</span></div>
+					<div class="appContent"><img src="appIcon/wenku.png" alt="" /><span>百度文库</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+<!--
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+-->
+			  </div>
+		</div>
+	<!--
+		<div class="swiper-slide">
+			<div class="padContent">
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+					<div class="appContent"><img src="launchpad1.png" alt="" /><span>app name</span></div>
+				</div>
+			</div>
+-->
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+</body>
+	<script src="swiper-bundle.min.js"></script>
+	<script src="jquery-1.11.0.min.js"></script>
+	<script src="jquery.mark.min.js"></script>
+	<script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        mousewheel: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+	<script>
+		var sites = [
+			"https://ps.gaoding.com/#/",
+			"https://www.bilibili.com",
+			"https://pan.baidu.com",
+			"https://www.amap.com",
+			"https://www.kdocs.cn/",
+			"https://www.tinkercad.com",
+			"https://cli.im",
+			"https://octave-online.net",
+			"https://www.latexlive.com",
+			"https://music.163.com",
+			"http://matting.deeplor.com/#/",
+			"https://www.gaitubao.com",
+			"https://azure.microsoft.com/zh-cn/services/cognitive-services/text-to-speech/#overview",
+			"https://wx.qq.com",
+			"https://app.xunjiepdf.com",
+			"https://vscode.dev",
+			"https://search.fuyeor.com/zh-cn/Bing",
+			"https://clipchamp.com/zh-hans/",
+			"https://www.douyin.com/",
+			"https://spline.design",
+			"https://mm.edrawsoft.cn/create",
+			"https://mastergo.com/",
+			"https://www.zhihu.com/",
+			"https://weibo.com/",
+			"https://www.gaoding.com/landing-page/35fc8",
+			"https://tool.chinaz.com/Tools/calculator",
+			"https://youdao.com",
+			"https://pan.baidu.com",
+			"https://meeting.tencent.com/user-center/join",
+			"https://i.chaoxing.com/",
+			"https://mc-zh.yuleiz.com/",
+			"https://capcut.cn",
+			"https://ai.taobao.com",
+			"https://wenku.baidu.com",
+			"#"
+		]
+		
+		var targe = document.querySelectorAll(".appContent");
+		for(var i=0;i<targe.length;i++){
+			(function(){ 
+            	var temp = targe[i],tempSite = sites[i]; 
+            	temp.onclick = function(){
+					window.open(tempSite, '_blank');
+//					console.log(temp);
+//					console.log(tempSite);
+				} 
+          	})(); 
+		}
+	</script>
+	<script>
+		$(function() {
+
+		  var mark = function() {
+
+		    // Read the keyword
+		    var keyword = $("input[name='keyword']").val();
+
+		    // Determine selected options
+		    var options = {
+		      "className": "match"
+		    };
+//		    $("input[name='opt[]']").each(function() {
+//		      options[$(this).val()] = $(this).is(":checked");
+//		    });
+
+		    // Mark the keyword inside the context
+		    $("span").removeMark();
+		    $("span").mark(keyword, options);
+		  };
+		  
+	      function mask(){$("body").css("background-image","linear-gradient(rgba(128,128,128,.5),transparent)");};
+		 function masko(){$("body").css("background","none");};
+			
+		  $("input[name='keyword']").on("keyup", mark);
+		  $("input[name='keyword']").focus(mask);
+		  $("input[name='keyword']").blur(masko);
+//		  $("input[type='checkbox']").on("change", mark);
+
+		});
+	</script>
+</html>

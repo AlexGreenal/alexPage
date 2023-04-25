@@ -1,0 +1,368 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Untitled Document</title>
+
+<style>
+	body{
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		zoom:1.2;
+	}
+.key_row2 {
+	display: block;
+	position: relative;
+	font-size: 10px;
+}
+.key_row {
+	display: block;
+	position: relative;
+	
+	height: 42px;
+	font-size: 10px;
+}
+.key_normal {
+	display: block;
+	position: relative;
+	border: 1px solid #bbb;
+	width: 32px;
+	height: 32px;
+	background-color: rgba(255,255,255,.8);
+	float: left;
+	margin: 2px;
+	padding: 2px;
+	border-radius:5px;
+}
+.key_normal:hover {
+	background-color: rgba(23,167,114,.4);
+}
+.light {
+	display: block;
+	position: relative;
+	border: 1px solid #bbb;
+	border-radius:12px;
+	width: 12px;
+	height: 12px;
+	background-color: darkgreen;
+	float: left;
+	margin-top: 18px;
+	margin-left: 16px;
+	padding: 2px;
+}
+
+	textarea{
+		border-bottom: 2px solid rgba(0,157,103,.6);
+		border-top: 0;
+		border-left: 0;
+		border-right: 0;
+/*		border-radius: 5px;*/
+		width: 630px;
+		background: transparent;
+	}
+</style>
+ 
+</head>
+
+<body>
+<textarea id="txt" placeholder="[未公开测试]键盘按下的键将显示在这里"></textarea>
+<!--<span id="keycoderesult" style="fon-size: 2.0em; color: red;"></span>-->
+<div>
+		<!-- 1234567890 -->
+		<div class="key_row">
+			<div class='key_normal' id='key_r2c1'>~<br>`</div>
+			<div class='key_normal' id='key_1'>!<br>1</div>
+			<div class='key_normal' id='key_2'>@<br>2</div>
+			<div class='key_normal' id='key_3'>#<br>3</div>
+			<div class='key_normal' id='key_4'>$<br>4</div>
+			<div class='key_normal' id='key_5'>%<br>5</div>
+			<div class='key_normal' id='key_6'>^<br>6</div>
+			<div class='key_normal' id='key_7'>&<br>7</div>
+			<div class='key_normal' id='key_8'>*<br>8</div>
+			<div class='key_normal' id='key_9'>(<br>9</div>
+			<div class='key_normal' id='key_0'>)<br>0</div>
+			<div class='key_normal' id='key_r2c2'>-<br>_</div>
+			<div class='key_normal' id='key_r2c3'>+<br>=</div>
+			<div class='key_normal' id='key_backspace'
+				style="width: 74px;"
+				>Backspace</div>
+		</div>
+		<!-- qwertyuiop -->
+		<div class="key_row">
+			<div class='key_normal' id='key_tab'
+				style="width: 56px;"
+				>Tab</div>
+			<div class='key_normal' id='key_q'>Q q</div>
+			<div class='key_normal' id='key_w'>W w</div>
+			<div class='key_normal' id='key_e'>E e</div>
+			<div class='key_normal' id='key_r'>R r</div>
+			<div class='key_normal' id='key_t'>T t</div>
+			<div class='key_normal' id='key_y'>Y y</div>
+			<div class='key_normal' id='key_u'>U u</div>
+			<div class='key_normal' id='key_i'>I i</div>
+			<div class='key_normal' id='key_o'>O o</div>
+			<div class='key_normal' id='key_p'>P p</div>
+			<div class='key_normal' id='key_r3c1'>{<br>[</div>
+			<div class='key_normal' id='key_r3c2'>}<br>]</div>
+			<div class='key_normal' id='key_r3c3'
+				style="width: 50px;"
+				>|<br>\</div>
+		</div>
+		<!-- asdfghjkl -->
+		<div class="key_row">
+			<div class='key_normal' id='key_capslock'
+				style="width: 68px;"
+				>CapsLock</div>
+			<div class='key_normal' id='key_a'>A a</div>
+			<div class='key_normal' id='key_s'>S s</div>
+			<div class='key_normal' id='key_d'>D d</div>
+			<div class='key_normal' id='key_f'>F f<br>   _</div>
+			<div class='key_normal' id='key_g'>G g</div>
+			<div class='key_normal' id='key_h'>H h</div>
+			<div class='key_normal' id='key_j'>J j<br>   _</div>
+			<div class='key_normal' id='key_k'>K k</div>
+			<div class='key_normal' id='key_l'>L l</div>
+			<div class='key_normal' id='key_r4c1'>:<br>;</div>
+			<div class='key_normal' id='key_r4c2'>"<br>'</div>
+			<div class='key_normal' id='key_enter'
+				style="width: 80px;"
+				>Enter<br>↵</div>
+		</div>
+		<!-- zxcvbnm -->
+		<div class="key_row">
+			<div class='key_normal' id='key_leftshift'
+				style="width: 90px;"
+				>Shift</div>
+			<div class='key_normal' id='key_z'>Z z</div>
+			<div class='key_normal' id='key_x'>X x</div>
+			<div class='key_normal' id='key_c'>C c</div>
+			<div class='key_normal' id='key_v'>V v</div>
+			<div class='key_normal' id='key_b'>B b</div>
+			<div class='key_normal' id='key_n'>N n</div>
+			<div class='key_normal' id='key_m'>M m</div>
+			<div class='key_normal' id='key_r5c1'><<br>,</div>
+			<div class='key_normal' id='key_r5c2'>><br>.</div>
+			<div class='key_normal' id='key_r5c3'>?<br>/</div>
+			<div class='key_normal' id='key_rightshift'
+				style="width: 100px;"
+				>Shift</div>
+		</div>
+		<!-- ctrl alt win space -->
+		<div class="key_row">
+			<div class='key_normal' id='key_leftctrl'
+				style="width: 56px;"
+				>Ctrl</div>
+			<div class='key_normal' id='key_leftwin'
+				style="width: 44px;"
+				>Win</div>
+			<div class='key_normal' id='key_leftalt'
+				style="width: 44px;"
+				>Alt</div>
+			<div class='key_normal' id='key_space'
+				style="width: 218px;"
+				>Space</div>
+			<div class='key_normal' id='key_rightalt'
+				style="width: 44px;"
+				>Alt</div>
+			<div class='key_normal' id='key_rightwin'
+				style="width: 44px;"
+				>Win</div>
+			<div class='key_normal' id='key_shortcut'
+				style="width: 44px;"
+				>ShortCut</div>
+			<div class='key_normal' id='key_rightctrl'
+				style="width: 56px;"
+				>Ctrl</div>
+		</div>
+		
+		<br>
+		
+	</div>
+</div>
+
+<script>
+var keysInfo = [
+	
+	{name: 'key_a', code: 65, mark: 'a'},
+	{name: 'key_b', code: 66, mark: 'b'},
+	{name: 'key_c', code: 67, mark: 'c'},
+	{name: 'key_d', code: 68, mark: 'd'},
+	{name: 'key_e', code: 69, mark: 'e'},
+	{name: 'key_f', code: 70, mark: 'f'},
+	{name: 'key_g', code: 71, mark: 'g'},
+	{name: 'key_h', code: 72, mark: 'h'},
+	{name: 'key_i', code: 73, mark: 'i'},
+	{name: 'key_j', code: 74, mark: 'j'},
+	{name: 'key_k', code: 75, mark: 'k'},
+	{name: 'key_l', code: 76, mark: 'l'},
+	{name: 'key_m', code: 77, mark: 'm'},
+	{name: 'key_n', code: 78, mark: 'n'},
+	{name: 'key_o', code: 79, mark: 'o'},
+	{name: 'key_p', code: 80, mark: 'p'},
+	{name: 'key_q', code: 81, mark: 'q'},
+	{name: 'key_r', code: 82, mark: 'r'},
+	{name: 'key_s', code: 83, mark: 's'},
+	{name: 'key_t', code: 84, mark: 't'},
+	{name: 'key_u', code: 85, mark: 'u'},
+	{name: 'key_v', code: 86, mark: 'v'},
+	{name: 'key_w', code: 87, mark: 'w'},
+	{name: 'key_x', code: 88, mark: 'x'},
+	{name: 'key_y', code: 89, mark: 'y'},
+	{name: 'key_z', code: 90, mark: 'z'},
+	
+	{name: 'key_0', code: 48, mark: '0'},
+	{name: 'key_1', code: 49, mark: '1'},
+	{name: 'key_2', code: 50, mark: '2'},
+	{name: 'key_3', code: 51, mark: '3'},
+	{name: 'key_4', code: 52, mark: '4'},
+	{name: 'key_5', code: 53, mark: '5'},
+	{name: 'key_6', code: 54, mark: '6'},
+	{name: 'key_7', code: 55, mark: '7'},
+	{name: 'key_8', code: 56, mark: '8'},
+	{name: 'key_9', code: 57, mark: '9'},
+	
+	{name: 'key_num_0', code: 96, mark: '0'},
+	{name: 'key_num_1', code: 97, mark: '1'},
+	{name: 'key_num_2', code: 98, mark: '2'},
+	{name: 'key_num_3', code: 99, mark: '3'},
+	{name: 'key_num_4', code: 100, mark: '4'},
+	{name: 'key_num_5', code: 101, mark: '5'},
+	{name: 'key_num_6', code: 102, mark: '6'},
+	{name: 'key_num_7', code: 103, mark: '7'},
+	{name: 'key_num_8', code: 104, mark: '8'},
+	{name: 'key_num_9', code: 105, mark: '9'},
+	
+	// ---------------
+	{name: 'key_num_lock', code: 144, mark: '[numlock]'},
+	{name: 'key_num_x1', code: 111, mark: '/'},
+	{name: 'key_num_x2', code: 106, mark: '*'},
+	{name: 'key_num_x3', code: 109, mark: '-'},
+	{name: 'key_num_x4', code: 107, mark: '+'},
+	{name: 'key_num_dot', code: 110, mark: '.'},
+	{name: 'key_num_enter', code: 108, mark: '[enter]'},
+	
+	// ---------------
+	{name: 'key_esc', code: 27, mark: '[esc]'},
+	
+	{name: 'key_r2c1', code: 192, mark: '`~'},
+	{name: 'key_r2c2', code: 189, mark: '-_'},
+	{name: 'key_r2c3', code: 187, mark: '=+'},
+	{name: 'key_backspace', code: 8, mark: '[backspace]'},
+	
+	{name: 'key_tab', code: 9, mark: '[tab]'},
+	{name: 'key_r3c1', code: 219, mark: '[{'},
+	{name: 'key_r3c2', code: 221, mark: ']}'},
+	{name: 'key_r3c3', code: 220, mark: '\\|'},
+	
+	{name: 'key_capslock', code: 20, mark: '[capslock]'},
+	{name: 'key_r4c1', code: 186, mark: ';:'},
+	{name: 'key_r4c2', code: 222, mark: '\'"'},
+	{name: 'key_enter', code: 13, mark: '[enter]'},
+	
+	{name: 'key_leftshift', code: 160, mark: '[leftshift]'},
+	{name: 'key_r5c1', code: 188, mark: ',<'},
+	{name: 'key_r5c2', code: 190, mark: '.>'},
+	{name: 'key_r5c3', code: 191, mark: '/?'},
+	{name: 'key_rightshift', code: 161, mark: '[rightshift]'},
+	
+	{name: 'key_leftctrl', code: 162, mark: '[leftctrl]'},
+	{name: 'key_leftwin', code: 91, mark: '[leftwin]'},
+	{name: 'key_leftalt', code: 164, mark: '[leftalt]'},
+	{name: 'key_space', code: 32, mark: ' '},
+	{name: 'key_rightalt', code: 165, mark: '[rightalt]'},
+	{name: 'key_rightwin', code: 92, mark: '[rightwin]'},
+	{name: 'key_shortcut', code: 93, mark: '[shortcut]'},
+	{name: 'key_rightctrl', code: 163, mark: '[rightctrl]'},
+	
+	// ---------------
+	{name: 'key_up', code: 38, mark: '[up]'},
+	{name: 'key_down', code: 40, mark: '[down]'},
+	{name: 'key_left', code: 37, mark: '[left]'},
+	{name: 'key_right', code: 39, mark: '[right]'}
+];
+var keyNameMap = {};
+var keyCodeMap = {};
+for (var i = 0; i < keysInfo.length; i++) {
+	keyNameMap[keysInfo[i].name] = keysInfo[i];
+	keyCodeMap[keysInfo[i].code] = keysInfo[i];
+}
+ 
+var karr = document.getElementsByClassName('key_normal');
+for (var i = 0; i < karr.length; i++) {
+	// console.log(karr[i].id);
+	karr[i].onclick = function() {
+		document.getElementById('txt').value = document.getElementById('txt').value + keyNameMap[this.id].mark;
+//		document.getElementById('keycoderesult').innerHTML = keyNameMap[this.id].code;
+	}
+}
+document.onkeydown = function(event){
+	//console.log("接收到按键编码：" + event);
+    var _keycode = window.event ? event.keyCode : event.which;
+    var keycode = _keycode;
+    document.getElementById('keycoderesult').innerHTML = keycode;
+    // 参考js的event对象可以
+    //0 代表标准按键 (如 "A")
+	//1 代表左侧按键 (如左侧的 CTRL 键)
+	//2 代表右侧按键 (如右侧的 CTRL 键)
+	//3 代表数字键盘上的按键 (如在数字键盘上的 "2" )
+    var keylocation = event.location;
+ 
+	if (keylocation == 0) {
+		
+	} else if (keylocation == 1) {
+		if (keycode == 16) {
+			keycode = 160; // lshift
+		} else if (keycode == 17) {
+			keycode = 162; // lctrl
+		} else if (keycode == 18) {
+			keycode = 164; // lalt
+		}
+	} else if (keylocation == 2) {
+		if (keycode == 16) {
+			keycode = 161; // rshift
+		} else if (keycode == 17) {
+			keycode = 163; // rctrl
+		} else if (keycode == 18) {
+			keycode = 165; // rlat
+		}
+	} else if (keylocation == 3) {
+		if (keycode == 13) {
+			keycode = 108;
+		}
+		// TODO 切换numlock关时
+		//else if (keycode == 13) {
+		//	keycode = 108;
+		//}
+	}
+	if (_keycode != keycode)
+    	console.log("调整按键编码：" + keycode);
+    var keyInfo = keyCodeMap[keycode];
+    if (keyInfo) {
+    	var ch = keyInfo.mark;
+    	if (ch.startsWith('[')) {
+    		document.getElementById('txt').value = document.getElementById('txt').value + keyInfo.mark;
+    	} else {
+    		// TODO
+    		ch = ch.substring(0, 1);
+    		document.getElementById('txt').value = document.getElementById('txt').value + ch;
+    	}
+    	
+    	document.getElementById(keyInfo.name).style.backgroundColor = "#eee";
+    	setTimeout(function() {
+    		document.getElementById(keyInfo.name).style.backgroundColor = "#aaa";
+    	}, 250);
+    } else {
+    	console.log("keycode: " + keycode);
+    }
+	return false;
+}
+</script>
+
+
+</body>
+</html>

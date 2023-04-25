@@ -1,0 +1,69 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.calculator {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  background-color: #fafafa;
+  border-radius: 20px;
+}
+.calculator .calc-screen {
+  position: absolute;
+  width: 100%;
+  height: 34%;
+  font-size: 1.5rem;
+}
+.calc-screen .calc-result {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  width: 96%;
+  margin: auto;
+  min-height: 1.5rem;
+  text-align: right;
+  white-space: nowrap;
+  color: #666;
+  line-height: 1.5rem;
+}
+.calc-result .data {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  transform-origin: right bottom;
+  transition: transform 200ms ease-in-out;
+}
+.calculator .calc-buttons {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 66%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.calc-buttons .buttons {
+  flex: 1 25%;
+  width: 25%;
+  height: 20%;
+  outline: 0;
+  font-size: 1.25rem;
+  font-family: 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+  color: #666;
+  background: #fff;
+  border: 1px solid #eee;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+.calc-buttons .buttons:active {
+  background-color: rgba(113,220,157,1.00);
+  color: #fff;
+}
+.calc-buttons .buttons.equals {
+  color: #fff;
+  background-color: rgba(92,190,132,1.00);
+}
+.calc-buttons .buttons.equals:active {
+  background-color: rgba(113,220,157,1.00);
+}
