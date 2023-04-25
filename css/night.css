@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/* CSS Document */
+.night {
+  color: rgba(255, 255, 255, 1.00);
+}
+body {
+  cursor: url("../img/cursor/Default.png"), default;
+}
+.titleBar {
+  cursor: url("../img/cursor/Move.png"), move;
+}
+.yes, .no, .maxsize, .minisize, .close, .outBtn, #VcloseBtn {
+  cursor: url("../img/cursor/Link.png"), pointer;
+}
+.dragBox {
+  cursor: url("../img/cursor/Diagonal_1.png"), se-resize;
+}
+@media (prefers-color-scheme: dark) {
+  /*
+	.keyboardPanel,.controlPanel,.notifacationPanel{
+		background: rgba(0,0,0,.3);
+	}
+*/
+  .darkModeText {
+    color: white;
+  }
+}

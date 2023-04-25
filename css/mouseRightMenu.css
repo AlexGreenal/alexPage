@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* CSS Document */
+.shade {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.wrap-ms-right {
+  list-style: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  padding: 5px 5px;
+  min-width: 100px;
+  margin: 0;
+  display: none;
+  font-family: "微软雅黑";
+  font-size: 14px;
+  /*	border: 1px solid rgba(0, 0, 0, .15);*/
+  box-sizing: border-box;
+  border-radius: 8px;
+  background: hsla(0, 0%, 100%, .25) border-box;
+  box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .3) inset, 0 .5em 1em rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 1px hsla(0, 0%, 100%, .3);
+}
+.ms-item {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+.ms-item:hover {
+  background-color: #68B195;
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+.m {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}

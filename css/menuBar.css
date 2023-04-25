@@ -1,0 +1,202 @@
+* {
+  list-style: none;
+}
+.menuBar {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  z-index: 100;
+  background: hsla(0, 0%, 100%, .25) border-box;
+  box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .3) inset, 0 .5em 1em rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 1px hsla(0, 0%, 100%, .3);
+}
+.menuBar::before {
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+  filter: blur(10px);
+}
+.barLeft {
+  width: 50%;
+  height: 100%;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  /*	color:#333;*/
+}
+a:hover {
+  /*	color:#1974A1;*/
+  border-radius: 5px;
+}
+.insideBar {
+  height: 25px;
+  line-height: 25px;
+  font-size: 15px;
+}
+.insideBar li {
+  float: left;
+  position: relative;
+}
+.insideBar li a {
+  display: block;
+  line-height: 25px;
+  text-decoration: none;
+  padding: 0px 10px;
+  /*	color:#333333;   */
+}
+.insideBar li a:hover {
+  background: rgba(239, 239, 239, 0.6);
+}
+#ctl:hover, #kbp:hover, #timeBar:hover, #vo:hover {
+  background: rgba(255, 255, 255, .8);
+  border-radius: 5px;
+}
+.insideBar li a.more:after {
+  content: " »";
+}
+.insideBar li ul {
+  position: absolute;
+  float: left;
+  width: 200px;
+  display: none;
+  background: rgba(239, 239, 239, 0.7);
+  box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .3) inset, 0 .5em 1em rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 1px hsla(0, 0%, 100%, .3);
+  z-index: 9999;
+  border-radius: 5px;
+}
+.insideBar li ul a {
+  width: 180px;
+  text-decoration: none;
+  /*	color:#333333;*/
+}
+.insideBar li ul a:hover {
+  background: #f2f2f2;
+}
+.insideBar li ul ul {
+  top: 0;
+  left: 200px;
+}
+hr {
+  width: 90%;
+  margin-left: 5%;
+  border: rgba(184, 184, 184, 0.3) solid 1px;
+  ;
+}
+.barRight {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.toolButton {
+  padding: 0 10px;
+}
+.controlPanel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 280px;
+  height: 90px;
+  border-radius: 10px;
+  top: -125px;
+  right: 10px;
+  /*	background: rgba(251,251,251,1.00);*/
+  background: hsla(0, 0%, 100%, .5) border-box;
+  box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .3) inset, 0 .5em 1em rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 1px hsla(0, 0%, 100%, .3);
+}
+.controlPanelAn {
+  animation: panelMove .3s ease-out forwards;
+}
+.notifacationPanel {
+ position:fixed;
+  top: 27px;
+  right: -360px;
+  /* left:calc(100% + 360px); */
+  width: 350px;
+  height: 100%;
+  background: hsla(0, 0%, 100%, .8) border-box;
+  box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .3) inset, 0 .5em 1em rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 1px hsla(0, 0%, 100%, .3);
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 1.00);
+  font-size: 0.75rem;
+  flex-direction: column;
+}
+.notifacationPanelAn {
+  animation: notifMove .2s ease-out forwards;
+}
+.notifacationPanelAnB {
+  animation: notifMoveB .2s ease-out forwards;
+}
+input[type='checkbox'].switch {
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background: rgba(204, 204, 204, .6);
+  border-radius: 10px;
+  transition: border-color .3s, background-color .3s;
+}
+input[type='checkbox'].switch::after {
+  content: '';
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0, 0, 2px, #999;
+  transition: .4s;
+  top: 2px;
+  position: absolute;
+  left: 2px;
+}
+input[type='checkbox'].switch:checked {
+  background: rgb(19, 206, 102);
+}
+input[type='checkbox'].switch:checked::after {
+  content: '';
+  position: absolute;
+  left: 55%;
+  top: 2px;
+}
+@keyframes panelMove {
+  from {
+    top: -125px;
+  }
+  to {
+    top: 35px;
+  }
+}
+@keyframes notifMove {
+  from {
+    right: -360px;
+  }
+  to {
+    right: 0px;
+  }
+}
+@keyframes notifMoveB {
+  from {
+    right: 0px;
+  }
+  to {
+    right: -360px;
+  }
+}

@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.windowDock{
+	position: absolute;
+	left: -200px;
+	top: calc(50% - 250px);
+	width: 150px;
+	height: 500px;
+	background: hsla(0, 0%, 100%, .25) border-box;
+  box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .3) inset, 0 .5em 1em rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 1px hsla(0, 0%, 100%, .3);
+	border-radius: 0 10px 10px 0;
+}
+
+.windowDockAppear{
+	 animation: windowDockAn .3s ease-out forwards;
+}
+
+.windowDockDisappear{
+	 animation: windowDockBAn .3s ease-out forwards;
+}
+
+
+@keyframes windowDockAn {
+  from {
+    left: -200px;
+  }
+  to {
+   	left:0px;
+  }
+}
+
+@keyframes windowDockBAn {
+  from {
+    left: 0px;
+  }
+  to {
+   	left: -200px;
+  }
+}
